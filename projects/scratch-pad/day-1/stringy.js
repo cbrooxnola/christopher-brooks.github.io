@@ -15,8 +15,8 @@
 function length(string) {
     // YOUR CODE BELOW HERE //
     
-
-
+//determine length of a given string
+return string.length;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -26,7 +26,9 @@ function length(string) {
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
 
-
+//convert given string to all lowercase
+var newString = string.toLowerCase();
+return newString; 
 
     // YOUR CODE ABOVE HERE //
 }
@@ -36,8 +38,9 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+//convert given string to all caps
+var bigString = string.toUpperCase();
+return bigString;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -57,7 +60,9 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
+//replace spaces in a given string with dashes
+var newestString = string.split("-");
+return newestString; 
 
 
     // YOUR CODE ABOVE HERE //

@@ -61,8 +61,7 @@ return bigString;
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 //replace spaces in a given string with dashes
-var newestString = string.split("-");
-return newestString; 
+console.log(string.replace(' ', '-'));
 
 
     // YOUR CODE ABOVE HERE //
@@ -82,9 +81,13 @@ return newestString;
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+ if (string[0] = char) {
+    return "true" //express true if char matches first value in string
+ }
+    else if (string[0] != char) {
+        return "false" //express false if char does not match first value in string
     
-
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -115,7 +118,8 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+ //return two strings combined
+ return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -134,7 +138,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+//return any number of given strings joined together
 
     // YOUR CODE ABOVE HERE //
 }
@@ -150,8 +154,11 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+//return the longer of two strings
+if (stringOne.length > stringTwo.length) {
+    return stringOne
+}
+else return stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }

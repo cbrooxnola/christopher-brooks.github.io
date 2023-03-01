@@ -21,8 +21,11 @@
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
+    var newStr = "";
+    for (var i = input.length - 1; i >= 0; i--) {
+      newStr += input[i];
+}
+ return newStr;   
     
     
     // YOUR CODE GOES ABOVE HERE //

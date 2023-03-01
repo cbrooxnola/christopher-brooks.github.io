@@ -61,7 +61,10 @@ return bigString;
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 //replace spaces in a given string with dashes
-console.log(string.replace(' ', '-'));
+string = string.toLowerCase();
+ var strArr = string.split(" ");
+ var strJoin = strArr.join("-");
+ return strJoin; 
 
 
     // YOUR CODE ABOVE HERE //
@@ -81,11 +84,15 @@ console.log(string.replace(' ', '-'));
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
- if (string[0] = char) {
-    return "true" //express true if char matches first value in string
+ //convert string to lowercase
+ string = string.toLowerCase();
+ //convert char to lowercase
+ char = char.toLowerCase();
+    if (string.charAt(0) === char) {
+    return true; //express true if char matches first value in string
  }
-    else if (string[0] != char) {
-        return "false" //express false if char does not match first value in string
+    else if (string.charAt(0) !== char) {
+        return false; //express false if char does not match first value in string
     
 }
     // YOUR CODE ABOVE HERE //
@@ -105,8 +112,18 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
+//convert string to lowercase
+string = string.toLowerCase();
+//convert char to lowercase
+char = char.toLowerCase();
+//assign variable to last value of string
+var last = string.length;
+   if (charAt(last) === char) {
+   return true; //express true if char matches first value in string
+}
+   else if (charAt(last) !== char) {
+       return false; //express false if char does not match first value in string
+   }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -139,7 +156,7 @@ function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
 //return any number of given strings joined together
-
+ return args.join("");
     // YOUR CODE ABOVE HERE //
 }
 
@@ -172,7 +189,14 @@ else return stringTwo;
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    if (stringOne < stringTwo) {
+        return 1;
+    }
+    else if (stringTwo < stringOne) {
+        return -1;
+    }
+    else {return 0;
+    }
 
 
     // YOUR CODE ABOVE HERE //
@@ -188,8 +212,13 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+if (stringOne > stringTwo) {
+    return 1;
+}
+else if (stringTwo > stringOne) {
+    return -1;
+}
+else {return 0;}
 
 
     // YOUR CODE ABOVE HERE //

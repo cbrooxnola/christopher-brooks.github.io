@@ -56,7 +56,7 @@ return Object.keys(object);
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
   for (var key in object) {
-  console.log(object[key]);
+  console.log(Object.keys(object));
  }
   //print each key
   
@@ -84,7 +84,8 @@ function getObjectValues(object) {
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
   for (var key in object) {
-
+     
+      console.log('Object.values(object)');
   }
   
   
@@ -97,7 +98,13 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
+  //initialize count variable at zero
+  var count = 0;
+  //return number of key/value pairs in object
+  for (var key in object) {
+    count++;//increase count
+  }
+    console.log(count);
   
   
   
@@ -110,7 +117,9 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  for (var i = object.length-1; i >= 0; i--) {
+    console.log(object.value(i)); 
+  }
   
   
   

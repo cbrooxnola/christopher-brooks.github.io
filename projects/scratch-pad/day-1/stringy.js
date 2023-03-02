@@ -117,7 +117,7 @@ string = string.toLowerCase();
 //convert char to lowercase
 char = char.toLowerCase();
 //assign variable to last value of string
-var last = string.charAt(length-1);
+var last = string.charAt(string.length - 1);
    if (last === char) {
    return true; //express true if char matches last value in string
 }

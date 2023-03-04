@@ -23,10 +23,20 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+    //create function called range with two integers as parameters
+    var insideRange = [];
+    if (start > end) {
+        for (var i = start; i >= end; i--) {
+        insideRange.push(i);}
+    //return array containing all integers between parameters inclusively
+    //if first argument is greater than second, return range in reverse order
+    }
+    else if (start < end) {
+        for (var e = start; e <= end; e++){
+            insideRange.push(e);
+        }
+    }
+    return insideRange;
     // YOUR CODE GOES ABOVE HERE //
 }
 

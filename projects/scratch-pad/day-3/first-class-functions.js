@@ -77,7 +77,11 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
+    var collect = [];
+    for (var i = 0; i < strings.length; i++) {
+        collect.push(modify(strings[i]));
+
+    }
     
     
     
@@ -95,9 +99,14 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
+    for (var i = 0; i < strings.length; i++) {
+        if (test(strings[i]) === false) {
+            return false;
+        }
+        return true;
     
-    
-    
+}
+   
     
     // YOUR CODE ABOVE HERE //
 }

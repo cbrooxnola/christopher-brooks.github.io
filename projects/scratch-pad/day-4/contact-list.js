@@ -80,7 +80,7 @@ function makeContactList() {
     }    
           //  4. removeContact(contact): takes a contact object to be removed from 
        //     the contact-list.
-       function printAllContactNames() {
+       /*function printAllContactNames() {
          for (var i = 0; i < contacts.length; i++)
          console.log(contacts[i].split(\n));
        }

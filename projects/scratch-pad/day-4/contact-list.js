@@ -35,8 +35,16 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
+//assign properties
+var object = {};
+    object.id = id,
+    object.nameFirst = nameFirst,
+    object.nameLast = nameLast;
 
-} 
+    return object; 
+}
+
+ 
 
 
 function makeContactList() {
@@ -49,12 +57,47 @@ function makeContactList() {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
-        }
-        add Contact: function(contact) {
-            contacts.push(contact);
-        }
+        
+    function addContact() {
+        contacts.push();
+    }    
+    //addContact(contact): takes a contact object to be added to the 
+         //contact-list.
+    function findContact(fullName) {
+        var name = contacts[nameFirst][] + " " + contacts[nameLast][];
+        for (var key in contacts) {
+            if (fullName === name) {
+                return fullName;
+            }
+            else {
+                return "undefined";
+         }
+             //3. findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
+         //    returns the contact object if found in the contacts-list, or, 
+          //   undefined if the fullName does not match any contacts in the list.
+    function removeContact(contact) {
+            // var removeCont = 
+    }    
+          //  4. removeContact(contact): takes a contact object to be removed from 
+       //     the contact-list.
+       function printAllContactNames() {
+         for (var i = 0; i < contacts.length; i++)
+         console.log(contacts[i].split(\n));
+       }
+       //  5. add a printAllContactNames() Function to your makeContactList() factory. The printAllContactNames() Function should 
+        //    return a String formated with all the full-names of the separated 
+          //  with a line-break, like so:
+             // 
+           // myContacts.printAllContactNames(); // => Max Gaudin
+              //                                        John Fraboni
+                //                                      Kaelyn Chresfield
+       
     }
 }
+}
+}
+}   
+
 
 
 

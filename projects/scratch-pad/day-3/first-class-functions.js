@@ -33,7 +33,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    //create variable for value
+
+    //create function to test if value is less than base
     
     
     

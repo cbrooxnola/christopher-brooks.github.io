@@ -15,9 +15,9 @@ function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
 
-    
-    
-    
+   return function(value) { 
+    return value > base;
+   }
     
     
     
@@ -36,7 +36,9 @@ function createLessThanFilter(base) {
     //create variable for value
 
     //create function to test if value is less than base
-    
+    return function(value) {
+        return value < base;
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -49,7 +51,12 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(string) {
+        if (string[0] === startsWith) {
+            return true;
+        }
+        else {return false};
+    }
     
     
     
@@ -63,8 +70,14 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
+    return function(string) {
+       //initialize variable for last character of string
+       var e = string.length;
+        if (string[e] === endsWith) {
+            return true;
+        }
+        else {return false};
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -79,11 +92,12 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    var collect = [];
+    var collect = []; //create array to collect results
     for (var i = 0; i < strings.length; i++) {
-        collect.push(modify(strings[i]));
-
+         var modStr = modify(strings[i]);   
+         collect.push(modStr);
     }
+    return collect; 
     
     
     
@@ -99,15 +113,16 @@ function modifyStrings(strings, modify) {
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
-function allStringsPass(strings, test) {
+function allStringsPass(strings, test) { //test means true/false
     // YOUR CODE BELOW HERE //
     for (var i = 0; i < strings.length; i++) {
         if (test(strings[i]) === false) {
             return false;
         }
+    }
         return true;
     
-}
+
    
     
     // YOUR CODE ABOVE HERE //

@@ -37,13 +37,13 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     // if value is an object       AND   not null                AND  not a date             AND   is not an array
-    if ((typeof value === object) && (typeof value !== null) && (typeof value !== date) && (Array.isArray(value) = false)) {
+    if ((typeof value === 'object') && (value !== null) && (!(value instanceof Date)) && (!(Array.isArray(value)))) {
          return true; // say true
      }
      else {
         return false; //otherwise say false
-    }
-    
+    };
+
     
     // YOUR CODE ABOVE HERE //
 }
@@ -56,14 +56,11 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    //if value is an object         and is not null                 and is not a date
-    if ((typeof value === object) && (typeof value !== null) && (typeof value !== date)) {
+             //if value is an object         and is not null              and not a date           OR is an array
+     if ((typeof value === 'object') && (value !== null) && (!(value instanceof Date)) || (Array.isArray(value))){
          return true; // return true
-     } //     or if it is an array
-     else if (Array.isArray(value)) {
-        return true; //return true
      }
-     else { //otherwise it is false
+         else { //otherwise it is false
         return false;
     }
     
@@ -95,9 +92,12 @@ function typeOf(value) {
     //if value is an array return array
        if (Array.isArray(value)) {
           return ('array');
-        } 
-        else if (typeof value === null) {
-        return 'null';
+        } // if it's null return null
+        else if (value === null) {
+        return ('null');
+    }
+    else if (value instanceof Date) {
+        return ('date');
     }
      else { //otherwise return the type of value
         return (typeof value);

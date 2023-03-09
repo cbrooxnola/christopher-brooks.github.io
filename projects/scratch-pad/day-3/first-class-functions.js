@@ -13,11 +13,10 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-
-   return function(value) { 
-    return value > base;
-   }
+    return function(value) {
+        return value > base;
+  }
+   
     
     
     
@@ -52,7 +51,7 @@ function createLessThanFilter(base) {
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     return function(string) {
-        if (string[0] === startsWith) {
+        if (string[0].toLowerCase() === startsWith.toLowerCase()) {
             return true;
         }
         else {return false};
@@ -72,8 +71,8 @@ function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     return function(string) {
        //initialize variable for last character of string
-       var e = string.length;
-        if (string[e] === endsWith) {
+       var e = string.length-1;
+        if (string[e].toLowerCase() === endsWith.toLowerCase()) {
             return true;
         }
         else {return false};

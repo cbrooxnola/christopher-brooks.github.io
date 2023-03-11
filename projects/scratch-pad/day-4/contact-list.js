@@ -37,9 +37,9 @@
 function makeContact(id, nameFirst, nameLast) {
 //assign properties
     var contact = {};
-    contact.id = 'id';
-    contact.nameFirst = 'nameFirst';
-    contact.nameLast = 'nameLast';
+    contact.id = id;
+    contact.nameFirst = nameFirst;
+    contact.nameLast = nameLast;
 
     return contact; //return object
 }
@@ -51,39 +51,43 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-  /*  var contacts =[];
-    
+    var contacts =[];
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
-        
-    function addContact() {
-        contacts.push();
-    }    
+        },
+    addContact: function(contact) {
+        return contacts.push(contact);
+    },    
     //addContact(contact): takes a contact object to be added to the 
          //contact-list.
-    function findContact(fullName) {
-        var name = contacts[nameFirst][] + " " + contacts[nameLast][];
-        for (var key in contacts) {
-            if (fullName === name) {
-                return fullName;
+    findContact: function(fullName) {
+        for (var i = 0; i < contacts.length; i++) {
+            if (contacts[i].nameFirst + " " + contacts[i].nameLast === fullName) {
+                return contacts[i];
             }
-            else {
-                return "undefined";
-         }
+        }
+         },
              //3. findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
          //    returns the contact object if found in the contacts-list, or, 
           //   undefined if the fullName does not match any contacts in the list.
-    function removeContact(contact) {
-            // var removeCont = 
-    }    
+    removeContact: function(contact) {
+        for (var i = 0; i < contacts.length; i++) {
+            contacts.splice(i, 1, );
+        }
+    },   
           //  4. removeContact(contact): takes a contact object to be removed from 
        //     the contact-list.
-       /*function printAllContactNames() {
-         for (var i = 0; i < contacts.length; i++)
-         console.log(contacts[i].split(\n));
+    printAllContactNames: function() {
+        var names = "";
+        for (var i = 0; i < contacts.length; i++) {
+         if (names !== "") {
+            names += '\n';
+         }
+         names += contacts[i].nameFirst + " " + contacts[i].nameLast;
        }
+       return names;
        //  5. add a printAllContactNames() Function to your makeContactList() factory. The printAllContactNames() Function should 
         //    return a String formated with all the full-names of the separated 
           //  with a line-break, like so:
@@ -95,10 +99,6 @@ function makeContactList() {
     }
 }
 }
-}
-}   
-*/
-
 
 
 

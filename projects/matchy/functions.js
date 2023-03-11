@@ -50,17 +50,20 @@ function remove(arr, str) {
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function add(arr, obj) {
-   if (obj.name.length > 0) {
-      if (obj.species.length > 0) {
+   var newObj = {};
          for (var i = 0; i < arr.length; i++) {
             if (arr[i].name !== obj.name) {
-               arr.push(obj);
+               newObj = obj;
+            }
+            else {return null;}
+         }
+         if (newObj.name.length > 0) {
+            if (newObj.species.length > 0) {
+               arr.push(newObj);
             }
          }
-      } 
-   }
-}
-
+      }
+   
 
 /**
  * You did it! You're all done with Matchy!

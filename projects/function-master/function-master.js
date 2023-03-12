@@ -24,8 +24,7 @@ return arr.join(' ');
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
-    var arr = Object.values(object);
-    return arr.join(' ');
+    
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -58,10 +57,9 @@ function capitalizeWord(string) {
 function capitalizeAllWords(string) {
     var caps = string.split();
     for (var i = 0; i < caps.length; i++) {
-caps[i] = caps[i].[0].toUpperCase() + caps[i].substr(1);
+    caps[i] = caps[i][0].toUpperCase() + caps[i].substr(1);
     }
     caps.join(' ');
-    return caps;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -69,7 +67,7 @@ caps[i] = caps[i].[0].toUpperCase() + caps[i].substr(1);
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
-
+return 'Welcome ' + object.name + "!";
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -77,7 +75,7 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
-
+return objectname + " is a " + object.species;
 }
 
 //////////////////////////////////////////////////////////////////////

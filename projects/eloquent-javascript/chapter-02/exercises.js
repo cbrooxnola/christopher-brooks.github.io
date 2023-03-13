@@ -36,12 +36,12 @@ function fizzBuzz() {
 function drawChessboard(num) {
   var board = '';
   for (var i = 1; i <= num; i++) {
-    for (var o = 0; o <= num; o++) {
+    for (var o = 1; o <= num; o++) {
       if ((i + o) % 2 === 0) {
-        board += '#';
+        board += ' ';
       }
       else if ((i + o) % 2 !== 0) {
-        board += ' ';
+        board += '#';
       }
     }
       board += '\n';

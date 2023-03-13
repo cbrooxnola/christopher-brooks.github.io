@@ -119,7 +119,7 @@ return object;
 
 function isFriend(name, object) {
 for (var i = 0; i < object.friends.length; i++) {
-    if (object.friends[i] === name) {
+    if (name === object.friends(i)) {
         return true;
     }
 }
@@ -134,20 +134,35 @@ function nonFriends(name, array) {
 
 }
 
+
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
 
+    if (object.hasOwnProperty(key)) {
+    object['key'] = value;
 }
+if (!(object.hasOwnProperty(key))) {
+    object.key = value; 
+}
+}
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 15 - Remove Properties ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
-
+var objArr = Object.keys(object);
+    for (var i = 0; i < array.length; i++) {
+    for (var o = 0; o < objArr.length; o++) {
+       if (objArr[o] === array[i]) {
+        delete object[o];
+       }
+    }
+}
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -155,7 +170,15 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
-
+    var newArr = [];
+    for (var i = 0; i < array.length; i++) {
+        for (var o = 0; o < array.length; o++) {
+           if (array[o] !== array[i]) {
+            newArr.push(array[o]);
+           }
+        }
+    }
+    return newArr; 
 }
 
 //////////////////////////////////////////////////////////////////////
